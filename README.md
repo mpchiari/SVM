@@ -34,8 +34,49 @@ Data.txt contains the data description (first 13 lines of the file), and a matri
 
 ## Algorithms
 ### Batch Gradient Descent
+<p align="center">
+  <img src="https://github.com/mpchiari/SVM/blob/master/images/batchGradient.png" width="550" title="Gradient formula">
+</p>
+
+where,
+k is the number of iterations,
+n is the dimensions of w,
+η is the learning rate of the gradient descent, and
+∇wj J(w, b) and ∇bJ(w, b) are the values computed from both equations given above. 
+
+The convergence criteria for the above algorithm is ∆%cost < ε, where
+<p align="center">
+  <img src="https://github.com/mpchiari/SVM/blob/master/images/convergenceCriteria.png" width="350" title="Gradient formula">
+</p>
+
+Jk(w,b) is the value of the loss function at kth iteration and the convergence criteria is computed at the end of the while loop.  
+Initialize w = 0, b = 0 and compute J0(w, b) with these values.  
+For this method, it is recommended to use η = 0.000000001 and ε = 0.04, or you can adjust these hyperparameters by yourself until you obtain reasonable results.
+
+
 ### Stochastic Gradient Descent
+<p align="center">
+  <img src="https://github.com/mpchiari/SVM/blob/master/images/stochasticGradient.png" width="550" title="Gradient formula">
+</p>
+
+The convergence criteria for the above algorithm is ∆%cost < ε, where
+<p align="center">
+  <img src="https://github.com/mpchiari/SVM/blob/master/images/convergenceCriteria2.png" width="350" title="Gradient formula">
+</p>
+
+For this method, it is recommended to use η = 0.00000001,ε = 0.0003, or you can adjust these hyperparameters by yourself until you obtain reasonable results.
+
 ### Mini Batch Gradient Descent
+<p align="center">
+  <img src="https://github.com/mpchiari/SVM/blob/master/images/miniBatchGradient.png" width="550" title="Gradient formula">
+</p>
+
+The convergence criteria for the above algorithm is ∆%cost < ε, where
+<p align="center">
+  <img src="https://github.com/mpchiari/SVM/blob/master/images/convergenceCriteria2.png" width="350" title="Gradient formula">
+</p>
+
+For this method, it is recommended to use η = 0.00000001, ε = 0.004, batch size = 4, or you can adjust these hyperparameters by yourself until you obtain reasonable results.
 
 ## Tasks
 
